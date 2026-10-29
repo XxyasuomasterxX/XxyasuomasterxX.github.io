@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Guía local de comercios, servicios y lugares de interés de Perico, Jujuy.">
+<title>Perico Cerca | Guía de Servicios</title>
+<style>
+:root{--green:#214f3b;--green2:#2f6a4e;--cream:#f7f5ef;--gold:#e5b75e;--ink:#1d2923;--muted:#68756d;--white:#fff;--line:#e4e8e2;--shadow:0 14px 40px rgba(27,54,39,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{color:inherit}button,input,select{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;letter-spacing:-.4px}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:var(--green);color:#fff;font-size:22px}.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.2px;text-transform:uppercase}.navlinks{display:flex;align-items:center;gap:22px}.navlinks a{text-decoration:none;font-size:14px;font-weight:650}.navlinks a:hover{color:var(--green2)}.navcta,.btn{border:0;border-radius:999px;background:var(--green);color:#fff;padding:12px 18px;font-weight:750;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}.navcta:hover,.btn:hover{background:var(--green2)}.menu{display:none;background:none;border:0;font-size:25px}
+.hero{background:linear-gradient(112deg,rgba(19,55,39,.94),rgba(32,79,59,.80)),linear-gradient(35deg,#6d8d68,#d9bd80);color:white;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-90px;top:-160px;width:470px;height:470px;border:1px solid rgba(255,255,255,.16);border-radius:50%;box-shadow:0 0 0 50px rgba(255,255,255,.035),0 0 0 100px rgba(255,255,255,.025)}
+.hero-inner{position:relative;z-index:1;padding:88px 0 74px;max-width:790px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--gold)}h1{font-size:clamp(40px,6vw,70px);line-height:1.04;letter-spacing:-2.6px;margin:14px 0 20px;max-width:750px}.hero p{font-size:18px;max-width:620px;color:#e7eee8;margin:0 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn.light{background:white;color:var(--green)}.btn.outline{background:transparent;border:1px solid rgba(255,255,255,.5)}.searchbox{margin-top:34px;background:white;border-radius:18px;padding:10px;display:flex;gap:8px;max-width:720px;box-shadow:0 18px 45px rgba(0,0,0,.18)}.searchbox input{border:0;outline:0;flex:1;min-width:100px;padding:12px;color:var(--ink)}.searchbox button{border:0;border-radius:12px;padding:12px 18px;background:var(--gold);font-weight:800;cursor:pointer}
+section{padding:72px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.kicker{color:var(--green2);font-size:12px;text-transform:uppercase;letter-spacing:1.7px;font-weight:850}h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1.2px;line-height:1.15;margin:8px 0}.section-head p,.intro{color:var(--muted);max-width:620px;margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.category{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff;box-shadow:var(--shadow);transition:transform .2s,border-color .2s}.category:hover{transform:translateY(-4px);border-color:#b7cbbd}.cat-icon{width:50px;height:50px;border-radius:16px;background:#edf3ed;display:grid;place-items:center;font-size:25px;margin-bottom:18px}.category h3{margin:0 0 7px;font-size:19px}.category p{margin:0;color:var(--muted);font-size:14px}.category a{display:inline-block;margin-top:16px;color:var(--green2);font-weight:800;text-decoration:none;font-size:14px}
+.tinted{background:var(--cream)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 24px}.toolbar input,.toolbar select{border:1px solid var(--line);border-radius:12px;padding:12px;background:white;min-width:170px}.toolbar input{flex:1}.listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.listing{background:#fff;border:1px solid var(--line);border-radius:18px;padding:21px;min-height:190px;display:flex;flex-direction:column}.listing .tag{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--green2);font-weight:850}.listing h3{margin:9px 0 5px;font-size:19px}.listing p{margin:0;color:var(--muted);font-size:14px}.listing .listing-bottom{margin-top:auto;padding-top:18px;display:flex;gap:10px;flex-wrap:wrap}.text-link{font-size:13px;font-weight:800;color:var(--green2);text-decoration:none}.empty{grid-column:1/-1;border:1px dashed #bfcbbf;border-radius:18px;padding:28px;text-align:center;color:var(--muted);background:#fff}.place-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.place-panel{border-radius:24px;background:var(--green);color:#fff;padding:32px}.place-panel p{color:#e0e9e2}.place-panel ul{padding-left:19px;color:#e0e9e2}.map-panel{border-radius:24px;overflow:hidden;min-height:320px;border:1px solid var(--line);background:#e8eee8}.map-panel iframe{width:100%;height:100%;min-height:320px;border:0}
+.assistant{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:start}.assistant-copy{padding:10px 0}.assistant-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#fff}.chat-head{background:var(--green);color:white;padding:17px 20px;display:flex;align-items:center;gap:12px}.chat-head .logo{background:rgba(255,255,255,.15)}.chat-head strong{display:block}.chat-head small{color:#dce8df}.chat-body{padding:20px;min-height:220px;max-height:330px;overflow:auto;background:#fbfcfa}.bubble{padding:12px 14px;border-radius:15px;margin:0 0 12px;max-width:92%;font-size:14px;white-space:pre-wrap}.bot{background:#edf3ed;border-top-left-radius:4px}.user{background:var(--green);color:white;margin-left:auto;border-top-right-radius:4px}.suggestions{display:flex;gap:7px;flex-wrap:wrap;padding:0 18px 14px}.suggestions button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px;font-size:12px;cursor:pointer}.chat-input{display:flex;gap:8px;padding:14px;border-top:1px solid var(--line)}.chat-input input{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;padding:12px}.chat-input button{border:0;border-radius:12px;background:var(--green);color:#fff;font-weight:800;padding:0 16px;cursor:pointer}.note{font-size:12px;color:var(--muted);padding:0 18px 16px}
+.join{background:#f4eee0}.join-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}.join-inner p{color:var(--muted);max-width:600px;margin-bottom:0}.join-inner .btn{white-space:nowrap}
+footer{background:#172c22;color:#e8eee9;padding:38px 0}.footer-row{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-row p{margin:6px 0;color:#bdcbc1;font-size:13px}.footer-links{display:flex;gap:16px;flex-wrap:wrap}.footer-links a{font-size:13px;color:#e8eee9}
+@media(max-width:800px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.navcta{display:none}.grid,.listing-grid{grid-template-columns:repeat(2,1fr)}.place-layout,.assistant{grid-template-columns:1fr}.hero-inner{padding:66px 0 56px}.section-head{align-items:start;flex-direction:column}.join-inner{align-items:flex-start;flex-direction:column}}
+@media(max-width:540px){.grid,.listing-grid{grid-template-columns:1fr}.hero p{font-size:16px}.searchbox{flex-wrap:wrap}.searchbox input{flex-basis:100%}.searchbox button{width:100%}section{padding:52px 0}.place-panel{padding:25px}h1{letter-spacing:-1.7px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><span class="logo">✦</span><span>Perico Cerca<small>Guía local · Jujuy</small></span></a>
+    <nav class="navlinks" id="navlinks"><a href="#categorias">Explorar</a><a href="#directorio">Directorio</a><a href="#lugares">Lugares</a><a href="#asistente">Asistente</a></nav>
+    <a class="navcta" href="#directorio">Encontrar un servicio ↗</a>
+    <button class="menu" id="menu" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero" id="inicio">
+ <div class="wrap hero-inner">
+  <div class="eyebrow">Tu ciudad, más cerca</div>
+  <h1>Descubrí Perico.<br>Encontrá lo que necesitás.</h1>
+  <p>Comercios, servicios y lugares de interés de Perico, reunidos en una guía práctica para vecinos y visitantes.</p>
+  <div class="hero-actions"><a class="btn light" href="#directorio">Explorar la guía <span>→</span></a><a class="btn outline" href="#lugares">Conocer Perico</a></div>
+  <form class="searchbox" id="heroSearch"><input id="heroQuery" aria-label="Buscar en la guía" placeholder="¿Qué estás buscando? Ej. comida, farmacia, feria"><button type="submit">Buscar en la guía</button></form>
+ </div>
+</section>
+<section id="categorias">
+ <div class="wrap">
+  <div class="section-head"><div><div class="kicker">Explorá por categoría</div><h2>Todo más fácil de encontrar</h2><p>Elegí una categoría para explorar la información disponible.</p></div></div>
+  <div class="grid">
+   <article class="category"><div class="cat-icon">🛍️</div><h3>Comercios</h3><p>Tiendas, mercados, ferias y emprendimientos locales.</p><a href="#directorio" data-category="Comercios">Ver comercios →</a></article>
+   <article class="category"><div class="cat-icon">🍴</div><h3>Gastronomía</h3><p>Restaurantes, cafeterías, panaderías y opciones para comer.</p><a href="#directorio" data-category="Gastronomía">Buscar dónde comer →</a></article>
+   <article class="category"><div class="cat-icon">🩺</div><h3>Salud y bienestar</h3><p>Farmacias, centros de salud y servicios relacionados.</p><a href="#directorio" data-category="Salud">Ver servicios →</a></article>
+   <article class="category"><div class="cat-icon">🚌</div><h3>Transporte</h3><p>Opciones para moverse y consultar conexiones.</p><a href="#directorio" data-category="Transporte">Ver transporte →</a></article>
+   <article class="category"><div class="cat-icon">🌿</div><h3>Turismo y paseos</h3><p>Plazas, espacios públicos, ferias y lugares para conocer.</p><a href="#directorio" data-category="Turismo">Descubrir lugares →</a></article>
+   <article class="category"><div class="cat-icon">🔧</div><h3>Servicios útiles</h3><p>Talleres, profesionales y soluciones para el día a día.</p><a href="#directorio" data-category="Servicios">Buscar servicios →</a></article>
+  </div>
+ </div>
+</section>
+<section class="tinted" id="directorio">
+ <div class="wrap">
+  <div class="section-head"><div><div class="kicker">Directorio local</div><h2>Encontrá opciones en Perico</h2><p>Este directorio está preparado para incorporar negocios y servicios con información verificada.</p></div></div>
+  <div class="toolbar"><input id="filterText" placeholder="Buscar por nombre o descripción…" aria-label="Buscar por nombre o descripción"><select id="filterCategory" aria-label="Filtrar categoría"><option value="">Todas las categorías</option><option>Comercios</option><option>Gastronomía</option><option>Salud</option><option>Transporte</option><option>Turismo</option><option>Servicios</option></select></div>
+  <div class="listing-grid" id="listingGrid"></div>
+ </div>
+</section>
+<section id="lugares">
+ <div class="wrap">
+  <div class="section-head"><div><div class="kicker">Conocé la ciudad</div><h2>Perico y sus puntos de interés</h2><p>Consultá el mapa para ubicar lugares y planificar cómo llegar.</p></div></div>
+  <div class="place-layout">
+   <div class="place-panel"><div class="eyebrow">Provincia de Jujuy</div><h2>Una guía hecha para la comunidad</h2><p>La idea es reunir en un solo lugar información útil para quienes viven en Perico y quienes vienen a conocer la ciudad.</p><ul><li>Ubicaciones y enlaces para llegar.</li><li>Comercios y emprendimientos de la zona.</li><li>Información clara, con datos que se puedan actualizar.</li></ul><a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Perico%2C%20Jujuy%2C%20Argentina">Abrir mapa de Perico ↗</a></div>
+   <div class="map-panel"><iframe title="Mapa de Perico, Jujuy" loading="lazy" src="https://maps.google.com/maps?q=Perico%2C%20Jujuy%2C%20Argentina&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></div>
+  </div>
+ </div>
+</section>
+<section class="tinted" id="asistente">
+ <div class="wrap assistant">
+  <div class="assistant-copy"><div class="kicker">Asistente de la guía</div><h2>¿Qué necesitás encontrar?</h2><p class="intro">Probá el asistente de demostración para explorar las categorías y la información inicial. En esta versión responde con una base local de preguntas frecuentes; no consulta todavía una inteligencia artificial externa.</p><p class="intro" style="margin-top:14px">Cuando carguemos los comercios reales, podremos conectarlo a una base de datos y a un proveedor de IA para responder preguntas más abiertas.</p></div>
+  <div class="assistant-card">
+   <div class="chat-head"><span class="logo">✦</span><div><strong>Perico Cerca · Asistente</strong><small>Guía local de demostración</small></div></div>
+   <div class="chat-body" id="chatBody"><div class="bubble bot">¡Hola! Puedo ayudarte a explorar la guía de Perico. ¿Qué estás buscando?</div></div>
+   <div class="suggestions"><button data-question="¿Qué categorías hay?">Ver categorías</button><button data-question="¿Cómo llego a Perico?">Cómo llegar</button><button data-question="¿Cómo agrego mi comercio?">Agregar mi comercio</button></div>
+   <form class="chat-input" id="chatForm"><input id="chatInput" placeholder="Escribí tu consulta…" aria-label="Escribí tu consulta"><button>Enviar</button></form>
+   <div class="note">Asistente inicial. Verificá la información importante con la fuente correspondiente.</div>
+  </div>
+ </div>
+</section>
+<section class="join" id="sumar">
+ <div class="wrap join-inner"><div><div class="kicker">Comunidad local</div><h2>¿Tenés un comercio o servicio?</h2><p>Sumá tu emprendimiento a la guía para que más vecinos y visitantes puedan encontrarlo. Antes de publicar, se revisarán los datos enviados.</p></div><a class="btn" href="https://docs.google.com/forms/" target="_blank" rel="noopener">Preparar formulario de alta ↗</a></div>
+</section>
+</main>
+<footer><div class="wrap footer-row"><div><a class="brand" href="#inicio" style="color:white"><span class="logo">✦</span><span>Perico Cerca<small style="color:#bdcbc1">Guía local · Jujuy</small></span></a><p>Una idea para conectar a la comunidad con sus comercios y lugares.</p></div><div class="footer-links"><a href="#categorias">Categorías</a><a href="#directorio">Directorio</a><a href="#lugares">Mapa</a><a href="#asistente">Asistente</a></div><p>Proyecto comunitario independiente. Verificá los datos antes de visitarlos.</p></div></footer>
+<script>
+const listings = [
+ {name:"Plaza San Martín",category:"Turismo",description:"Punto de referencia para explorar el centro de Perico.",address:"Perico, Jujuy",maps:"https://www.google.com/maps/search/?api=1&query=Plaza+San+Martin+Perico+Jujuy",verified:false},
+ {name:"Feria Minorista de Perico",category:"Comercios",description:"Lugar de referencia para buscar información sobre la feria local.",address:"Perico, Jujuy",maps:"https://www.google.com/maps/search/?api=1&query=Feria+Minorista+Perico+Jujuy",verified:false},
+ {name:"Tu comercio puede aparecer acá",category:"Comercios",description:"Este espacio está listo para incorporar un negocio local con datos confirmados.",address:"Agregar dirección verificada",maps:"https://www.google.com/maps/search/?api=1&query=Comercios+Perico+Jujuy",verified:false},
+ {name:"Tu emprendimiento gastronómico",category:"Gastronomía",description:"Agregá restaurantes, cafeterías, comedores o panaderías de Perico.",address:"Agregar dirección verificada",maps:"https://www.google.com/maps/search/?api=1&query=Gastronomia+Perico+Jujuy",verified:false},
+ {name:"Servicio local",category:"Servicios",description:"Incorporá talleres, profesionales y otros servicios útiles.",address:"Agregar dirección verificada",maps:"https://www.google.com/maps/search/?api=1&query=Servicios+Perico+Jujuy",verified:false}
+];
+const grid=document.getElementById('listingGrid'), filterText=document.getElementById('filterText'), filterCategory=document.getElementById('filterCategory');
+function renderListings(){
+ const q=filterText.value.trim().toLowerCase(), cat=filterCategory.value;
+ const results=listings.filter(x=>(!cat||x.category===cat)&&(`${x.name} ${x.description} ${x.category}`.toLowerCase().includes(q)));
+ grid.innerHTML='';
+ if(!results.length){grid.innerHTML='<div class="empty">No encontramos resultados. Probá con otra palabra o categoría.</div>';return}
+ results.forEach(x=>{const el=document.createElement('article');el.className='listing';el.innerHTML=`<div class="tag">${x.category}</div><h3></h3><p></p><div class="listing-bottom"><a class="text-link" target="_blank" rel="noopener" href="${x.maps}">Ver ubicación ↗</a><span class="text-link" style="color:#77847b">Datos por verificar</span></div>`;el.querySelector('h3').textContent=x.name;el.querySelector('p').textContent=x.description;grid.appendChild(el)});
+}
+filterText.addEventListener('input',renderListings);filterCategory.addEventListener('change',renderListings);renderListings();
+document.querySelectorAll('[data-category]').forEach(a=>a.addEventListener('click',()=>{filterCategory.value=a.dataset.category;renderListings()}));
+document.getElementById('heroSearch').addEventListener('submit',e=>{e.preventDefault();filterText.value=document.getElementById('heroQuery').value;filterCategory.value='';renderListings();document.getElementById('directorio').scrollIntoView({behavior:'smooth'})});
+document.getElementById('menu').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+const chatBody=document.getElementById('chatBody'),chatInput=document.getElementById('chatInput');
+function addBubble(text,cls){const b=document.createElement('div');b.className='bubble '+cls;b.textContent=text;chatBody.appendChild(b);chatBody.scrollTop=chatBody.scrollHeight}
+function answer(q){
+ const s=q.toLowerCase();
+ if(s.includes('categor')||s.includes('qué hay')||s.includes('que hay'))return 'La guía está organizada en comercios, gastronomía, salud y bienestar, transporte, turismo y servicios útiles. Podés usar el directorio para filtrar por categoría.';
+ if(s.includes('lleg')||s.includes('mapa')||s.includes('ubic')||s.includes('dónde')||s.includes('donde'))return 'Podés abrir el mapa general de Perico desde la sección “Perico y sus puntos de interés”. Para indicaciones precisas, buscá el nombre del destino en Google Maps y verificá la dirección antes de salir.';
+ if(s.includes('comercio')||s.includes('emprend')||s.includes('agregar')||s.includes('publicar'))return '¡Buenísimo que quieras sumar un negocio! La guía necesita un formulario propio para recibir nombre, categoría, dirección, horarios y un contacto público. El botón de alta todavía es demostrativo; hay que reemplazarlo por un formulario real antes de publicar.';
+ if(s.includes('comer')||s.includes('restaurant')||s.includes('gastronom'))return 'Elegí la categoría “Gastronomía” en el directorio para consultar las opciones que se vayan incorporando. Todavía hace falta cargar y verificar los nombres, horarios y contactos de los locales.';
+ if(s.includes('salud')||s.includes('farmacia')||s.includes('hospital'))return 'La categoría “Salud y bienestar” está preparada para reunir farmacias y centros de salud. Para una urgencia, consultá los canales oficiales de emergencias y salud; esta guía no reemplaza esos servicios.';
+ if(s.includes('turis')||s.includes('visitar')||s.includes('paseo')||s.includes('plaza'))return 'Podés empezar por la sección “Perico y sus puntos de interés” y abrir el mapa. La lista de sitios turísticos debe completarse con información local confirmada.';
+ if(s.includes('hola')||s.includes('buenas'))return '¡Hola! Puedo orientarte sobre las secciones de la guía. Por ahora soy una demostración con respuestas frecuentes, no una IA conectada a internet.';
+ return 'Todavía no tengo una respuesta confirmada para esa consulta. Probá buscar en el directorio o reformulá la pregunta. Cuando se conecte la base de datos y el asistente de IA, podrá responder consultas más específicas.';
+}
+document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();const q=chatInput.value.trim();if(!q)return;addBubble(q,'user');chatInput.value='';setTimeout(()=>addBubble(answer(q),'bot'),150)});
+document.querySelectorAll('[data-question]').forEach(b=>b.addEventListener('click',()=>{const q=b.dataset.question;addBubble(q,'user');setTimeout(()=>addBubble(answer(q),'bot'),150)}));
+</script>
+</body>
+</html>
